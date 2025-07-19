@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>All Clients</title></head>
+<body>
+    <h1>Clients</h1>
+    <ul>
+        {% for client in clients %}
+            <li>{{ client.client_name }} - Created by {{ client.created_by }} on {{ client.created_at }}</li>
+        {% empty %}
+            <li>No clients found.</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to Home</a>
+</body>
+</html>
